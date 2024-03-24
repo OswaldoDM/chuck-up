@@ -6,7 +6,8 @@ import { ChuckApp } from './ChuckApp.jsx'
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>      
+    
+    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/chuck-jokes-app/'} >      
         <ChuckApp />
     </BrowserRouter> 
 );
