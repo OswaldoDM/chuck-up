@@ -22,7 +22,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = '/chuck-jokes-app/'
+    config.base = '/chuck-up/'
   }
 
   return config

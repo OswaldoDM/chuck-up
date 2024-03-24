@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ChuckCategories } from "./ChuckCategories"
 import { ChuckJoke } from "./ChuckJoke"
 import { Navbar } from "./components/Navbar"
@@ -12,16 +12,16 @@ export function ChuckApp() {
     <>  
         <Navbar />
                
-        {/* <BrowserRouter
-        basename={import.meta.env.DEV ? '/' : '/chuck-jokes-app/'} 
-        > */}
+        <BrowserRouter
+        basename={import.meta.env.DEV ? '/' : '/chuck-up/'} 
+        >
 
         <Routes>
             <Route path="/" element={ <ChuckCategories /> }></Route>
             <Route path="jokes/:category" element= { <ChuckJoke /> }></Route>
         </Routes>
         
-        {/* </BrowserRouter> */}
+        </BrowserRouter>
 
         <Footer />
     </>
